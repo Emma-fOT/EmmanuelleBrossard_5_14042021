@@ -1,0 +1,17 @@
+/*Mobile-first project*/
+/*Breakpoints: 480px and 980px*/
+
+@import "./utils/variables";
+@import "./utils/keyframes";
+@import "./utils/mixins";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/menu";
+@import "./pages/home";

@@ -1,0 +1,113 @@
+h1 {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-top: -217px;
+  margin-bottom: 120px;
+  padding-right: 20px;
+}
+
+main div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+main article {
+  text-align: center;
+}
+
+article > a {
+  cursor: pointer;
+}
+
+article img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 125px;
+  margin-top: 50px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+article h2 {
+  color: #d3573c;
+  margin: 10px 0 5px 0;
+  font-size: 2.2rem;
+}
+
+article p {
+  margin: 3px 0;
+}
+
+article p:nth-of-type(1) {
+  font-size: 0.9rem;
+}
+
+article p:nth-of-type(2) {
+  color: black;
+  font-size: 0.7rem;
+}
+
+article p:nth-of-type(3) {
+  color: grey;
+  font-size: 0.6rem;
+}
+
+article li {
+  font-size: 0.8rem;
+}
+
+@media all and (min-width: 649px) {
+  /*Filters are up to here on 2 lines*/
+  h1 {
+    font-size: 2.2rem;
+    margin-top: -191px;
+    margin-bottom: 73px;
+  }
+
+  main div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main div article {
+    min-width: 300px;
+    margin: 0 20px;
+    flex: 1 1 auto;
+  }
+}
+
+@media all and (max-width: 358px) {
+  /*Filters are before on 3 lines*/
+
+  h1 {
+    margin-top: -255px;
+    margin-bottom: 150px;
+  }
+}
+
+@media all and (min-width: 500px) {
+  h1 {
+    font-size: 1.4rem;
+    margin-top: -222px;
+    margin-bottom: 115px;
+  }
+}
+
+@media all and (min-width: 649px) {
+  /*Filters are up to here on 2 lines*/
+  h1 {
+    font-size: 2.2rem;
+    margin-top: -191px;
+    margin-bottom: 73px;
+  }
+}
+
+@media all and (min-width: 1240px) {
+  h1 {
+    margin-top: -87px;
+  }
+}
