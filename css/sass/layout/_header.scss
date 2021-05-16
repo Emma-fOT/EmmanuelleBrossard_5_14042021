@@ -33,11 +33,16 @@ article li {
 nav a,
 article li a {
   font-weight: bold;
-  color: #901c1c;
+  color: $primary-color;
   text-decoration: none;
-  padding: 4px 8px;
+  padding: 3px 8px;
   border: 1px solid #c4c4c4;
-  border-radius: 12px;
+  border-radius: 20px;
+  transition: 0.5s;
+  &:hover {
+    color: white;
+    background-color: $primary-color;
+  }
 }
 
 @media all and (max-width: 358px) {

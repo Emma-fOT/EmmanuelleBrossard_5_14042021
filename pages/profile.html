@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fisheye - Photographer profile</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/utils.js"></script>
+    <script src="../js/profile.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d6ea9b7a9a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="profile">
+    <header>
+      <a href="../index.html" alt="Page d'accueil Fisheye"><img src="../images/logo-FishEye.svg"></img></a>
+    </header>
+
+    <main>
+      <section class="profile__card">
+          <div class="profile__card__infos">
+            <div>
+              <h1 id="name"></h1>
+              <p id= "location"></p>
+              <p id="tagline"></p>
+            </div>
+            <div>
+              <img id="profilePicture" class="profile__card__pic"></img>
+            </div>
+          </div> 
+          <div id="tags" class="profile__card__tags"></div>        
+      </section>
+      <div class="button">
+        <button id="modalBtn">Contactez-moi</button>
+      </div>
+      <div id="modalWindow" class="modal">
+        <div class="modal__content">
+          <span id = "modalClose" class="modal__content__close">&times;</span>
+          <h1 id="myModalTitle">Contactez-moi</h1>
+          <form id="modalForm" 
+              name="modalForm"
+              method="get"
+              onsubmit="return validate(event)">
+            <label for="fname">Prénom</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Nom</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea><br>
+            <input type="submit" value="Envoyer">
+          </form>
+        </div>
+      </div>
+    
+    </main>
+
+  </body>
+</html>

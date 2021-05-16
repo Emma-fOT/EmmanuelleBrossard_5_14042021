@@ -1,0 +1,43 @@
+form {
+  margin: 0;
+  padding: 0;
+  label {
+    color: black;
+    font-size: 1.2rem;
+  }
+  input,
+  textarea {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  input {
+    height: 40px;
+    &[type="text"],
+    &[type="email"] {
+      width: 95% !important;
+    }
+    &[type="submit"] {
+      width: 50% !important;
+      margin-left: 20%;
+      margin-right: 20%;
+      color: white;
+      background-color: $primary-color;
+    }
+  }
+  textarea {
+    height: 100px;
+    resize: none;
+    width: 95% !important;
+  }
+}
+
+@media all and (min-width: 650px) {
+  form input[type="submit"] {
+    height: 50px;
+    width: 200px !important;
+    margin-left: 0;
+  }
+}

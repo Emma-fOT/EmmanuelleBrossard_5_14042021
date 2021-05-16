@@ -17,7 +17,7 @@ function showCards(jsonObj) {
     portrait.src = `/images/Sample Photos/Photographers ID Photos/${listOfPhotographers[i].portrait}`;
     name.textContent = listOfPhotographers[i].name;
     link.setAttribute("aria-label", name.textContent);
-    link.href = `/${name.textContent.replaceAll(" ", "")}`;
+    link.href = `/pages/profile.html?id=${listOfPhotographers[i].id}`;
     link.classList.add("photographer");
     link.appendChild(portrait);
     link.appendChild(name);
@@ -62,10 +62,6 @@ function filterCards() {
   }
 }
 
-// "OpenPhotographerPage" creates the DOM of the new page (the page of the photographer)
-
-function openPhotographerPage() {}
-
 // Loading of the main page
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -85,10 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const listOfFilters = document.getElementsByClassName("filter");
     for (let i = 0; i < listOfFilters.length; i += 1) {
       listOfFilters[i].addEventListener("click", filterCards);
-    }
-    const listOfPhotographers = document.getElementsByClassName("photographer");
-    for (let i = 0; i < listOfPhotographers.length; i += 1) {
-      listOfPhotographers[i].addEventListener("click", openPhotographerPage);
     }
   });
 });

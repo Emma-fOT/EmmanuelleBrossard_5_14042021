@@ -8,6 +8,40 @@ body {
   margin-right: auto;
 }
 
+button {
+  background-color: #901c1c;
+  color: white;
+  font-size: 1rem;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: #d3573c;
+  color: black;
+  cursor: pointer;
+}
+
+.button {
+  margin: 0 -20px;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  text-align: center;
+}
+
+@media all and (min-width: 980px) {
+  button {
+    padding: 20px 15px;
+  }
+
+  .button {
+    top: 205px;
+    left: -50px;
+  }
+}
 header {
   padding: 40px 0px;
 }
@@ -46,9 +80,15 @@ article li a {
   font-weight: bold;
   color: #901c1c;
   text-decoration: none;
-  padding: 4px 8px;
+  padding: 3px 8px;
   border: 1px solid #c4c4c4;
-  border-radius: 12px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+nav a:hover,
+article li a:hover {
+  color: white;
+  background-color: #901c1c;
 }
 
 @media all and (max-width: 358px) {
@@ -64,30 +104,69 @@ article li a {
     padding: 0;
   }
 }
-h1 {
+form {
+  margin: 0;
+  padding: 0;
+}
+form label {
+  color: black;
+  font-size: 1.2rem;
+}
+form input,
+form textarea {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+}
+form input {
+  height: 40px;
+}
+form input[type=text], form input[type=email] {
+  width: 95% !important;
+}
+form input[type=submit] {
+  width: 50% !important;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: white;
+  background-color: #901c1c;
+}
+form textarea {
+  height: 100px;
+  resize: none;
+  width: 95% !important;
+}
+
+@media all and (min-width: 650px) {
+  form input[type=submit] {
+    height: 50px;
+    width: 200px !important;
+    margin-left: 0;
+  }
+}
+.home h1 {
   text-align: right;
   font-size: 0.9rem;
   margin-top: -217px;
   margin-bottom: 120px;
   padding-right: 20px;
 }
-
-main div {
+.home main div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 50px;
 }
-
-main article {
+.home main article {
   text-align: center;
 }
-
-article > a {
+.home article > a {
   cursor: pointer;
+  text-decoration: none;
 }
-
-article img {
+.home article img {
   width: 250px;
   height: 250px;
   object-fit: cover;
@@ -95,51 +174,43 @@ article img {
   margin-top: 50px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
-
-article h2 {
+.home article h2 {
   color: #d3573c;
   margin: 10px 0 5px 0;
   font-size: 2.2rem;
 }
-
-article p {
+.home article p {
   margin: 3px 0;
 }
-
-article p:nth-of-type(1) {
+.home article p:nth-of-type(1) {
   font-size: 0.9rem;
 }
-
-article p:nth-of-type(2) {
+.home article p:nth-of-type(2) {
   color: black;
   font-size: 0.7rem;
 }
-
-article p:nth-of-type(3) {
+.home article p:nth-of-type(3) {
   color: grey;
   font-size: 0.6rem;
 }
-
-article li {
+.home article li {
   font-size: 0.8rem;
 }
 
 @media all and (min-width: 649px) {
   /*Filters are up to here on 2 lines*/
-  h1 {
+  .home h1 {
     font-size: 2.2rem;
     margin-top: -191px;
     margin-bottom: 73px;
   }
-
-  main div {
+  .home main div {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
-
-  main div article {
+  .home main div article {
     min-width: 300px;
     margin: 0 20px;
     flex: 1 1 auto;
@@ -147,13 +218,13 @@ article li {
 }
 @media all and (max-width: 358px) {
   /*Filters are before on 3 lines*/
-  h1 {
+  .home h1 {
     margin-top: -255px;
     margin-bottom: 150px;
   }
 }
 @media all and (min-width: 500px) {
-  h1 {
+  .home h1 {
     font-size: 1.4rem;
     margin-top: -222px;
     margin-bottom: 115px;
@@ -161,15 +232,147 @@ article li {
 }
 @media all and (min-width: 649px) {
   /*Filters are up to here on 2 lines*/
-  h1 {
+  .home h1 {
     font-size: 2.2rem;
     margin-top: -191px;
     margin-bottom: 73px;
   }
 }
 @media all and (min-width: 1240px) {
-  h1 {
+  .home h1 {
     margin-top: -87px;
+  }
+}
+.profile main {
+  padding: 0 20px;
+}
+.profile h1 {
+  font-size: 2.2rem;
+  line-height: 2rem;
+  margin: 0;
+}
+.profile p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.profile__card__infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile__card__infos > div {
+  max-width: 300px;
+}
+.profile__card__infos h1 {
+  color: #d3573c;
+}
+.profile__card__infos p:nth-of-type(1) {
+  margin-top: 3px;
+}
+.profile__card__infos p:nth-of-type(2) {
+  color: #525252;
+}
+.profile__card__pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.profile__card__tags ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 0;
+  padding: 0;
+}
+.profile__card__tags ul li {
+  text-decoration: none;
+  margin: 5px 3px 5px 0;
+}
+.profile__card__tags ul li a {
+  font-weight: bold;
+  color: #901c1c;
+  text-decoration: none;
+  padding: 1px 8px;
+  border: 1px solid #c4c4c4;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.profile__card__tags ul li a:hover {
+  color: white;
+  background-color: #901c1c;
+}
+.profile .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.profile .modal h1 {
+  color: black;
+  margin-bottom: 30px;
+}
+.profile .modal__content {
+  background-color: #d3573c;
+  margin: 0;
+  padding: 5%;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  width: 90%;
+  height: 100%;
+}
+.profile .modal__content__close {
+  color: white;
+  float: right;
+  font-size: 3rem;
+  line-height: 1rem;
+}
+.profile .modal__content__close:hover, .profile .modal__content__close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media all and (min-width: 650px) {
+  .profile h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .profile p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  .profile__card {
+    background-color: #fafafa;
+    padding: 30px 50px;
+  }
+  .profile__card__pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: 20px 0px 0px 0px;
+  }
+  .profile__card__tags ul {
+    margin-top: -20px;
+  }
+  .profile .modal__content {
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+  }
+  .profile .modal__content__close {
+    font-size: 5rem;
   }
 }
 
